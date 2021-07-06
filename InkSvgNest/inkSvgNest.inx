@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>InkSvgNest</name>
+    <id>org.inkscape.inksvgnest</id>
+
+    <label>InkSvgNest is tool for fast nesting SVG components</label>
+    <param name="tab" type="notebook">
+        <page name="absolute" gui-text="Absolute path">
+            <param name="a_mode" type="optiongroup" appearance="combo" gui-text="Choose mode" gui-description="Will be writed">
+                <option translatable="no" value="svgToSvg">SVG to SVG</option>
+                <option translatable="no" value="svgToYaml">SVG to YAML</option>
+                <option translatable="no" value="yamlToSvg">YAML to SVG</option>
+            </param>
+            <param name="a_file" type="path" mode="file" gui-text="SVG or YAML file" gui-description="Same as SVG file if empty"></param>
+        </page>
+
+        <page name="relative" gui-text="Relative path">
+            <param name="r_mode" type="optiongroup" appearance="combo" gui-text="Choose mode" gui-description="Will be writed">
+                <option translatable="no" value="svgToSvg">SVG to SVG</option>
+                <option translatable="no" value="svgToYaml">SVG to YAML</option>
+                <option translatable="no" value="yamlToSvg">YAML to SVG</option>
+            </param>
+            <param name="r_file" type="string" mode="file" gui-text="SVG or YAML file" gui-description="Same as SVG file if empty"></param>
+        </page>
+
+        <page name="Help" gui-text="Help">
+            <label xml:space="preserve">
+Will be wrote in the nearest future
+<!--Adjusts hue, saturation and lightness in the HSL representation of the selected objects's color.-->
+<!--Options:-->
+<!--    * Hue: rotate by degrees (wraps around).-->
+<!--    * Saturation: add/subtract % (min=-100, max=100).-->
+<!--    * Lightness: add/subtract % (min=-100, max=100).-->
+<!--    * Random Hue/Saturation/Lightness: randomize the parameter's value.-->
+            </label>
+        </page>
+    </param>
+
+
+    <label>For more information switch to tab Help</label>
+    <effect needs-live-preview="false">
+                <object-type>all</object-type>
+                <effects-menu>
+                      <submenu name="My Extensions"/>
+                </effects-menu>
+    </effect>
+    
+    <script>
+        <command location="inx" interpreter="python">inkSvgNest.py</command>
+    </script>
+    
+</inkscape-extension>
