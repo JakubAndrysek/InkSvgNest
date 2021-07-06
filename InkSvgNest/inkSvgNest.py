@@ -29,13 +29,13 @@ This script
 """
 
 import os
-import locale
-import sys
 import inkex
 from lxml import etree, objectify
-from ruamel.yaml import YAML
-from inkex.command import inkscape
-# from inkex.deprecated.DeprecatedEffect
+
+try:
+    from ruamel.yaml import YAML
+except:
+    YAML = None
 import inkex.utils
 import inkex.base
 
