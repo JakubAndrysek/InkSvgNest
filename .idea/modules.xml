@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/PySvgNest.iml" filepath="$PROJECT_DIR$/.idea/PySvgNest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/InkSvgNest.iml" filepath="$PROJECT_DIR$/.idea/InkSvgNest.iml" />
     </modules>
   </component>
 </project>
