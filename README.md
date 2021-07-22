@@ -21,8 +21,7 @@ The extension reads original nested version and tries to apply same coordination
 ### SVG to YAML with coordinates
 The extension reads the coordinates of the currently open file and saves them in a YAML file in the format `"Object name"->"Coordinates"`.
 
-### Souřadnicový YAML na SVG
-Opačná variantak k předchozí volbě otevře YAML soubor se souřadnicemi a pokusí se je podle názvu objektu aplikovat na otevřený soubor.
+### YAML with coordinates to SVG
 The opposite variant to the previous option. Extension opens a YAML file with coordinates and tries to apply them to the open file according to the object name.
 
 ## Options
@@ -31,5 +30,5 @@ When selecting, it is necessary to select the full path to a specific folder and
 The colon is used for graphical selection of the path.
 If the required file does not exist, it is created, otherwise the file is overwritten.
 
-### Relativní cesta
+### Relative path
 By relative path is meant the same folder as for the currently open file.
