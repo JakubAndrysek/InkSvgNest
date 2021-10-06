@@ -3,7 +3,7 @@
     <name>InkSvgNest</name>
     <id>org.inkscape.inksvgnest</id>
 
-    <label>InkSvgNest is tool for fast nesting SVG components</label>
+    <label>InkSvgNest is tool for backup nesting configuration</label>
     <param name="tab" type="notebook">
         <page name="absolute" gui-text="Absolute path">
             <param name="a_mode" type="optiongroup" appearance="combo" gui-text="Choose mode" gui-description="Will be writed">
@@ -25,13 +25,16 @@
 
         <page name="Help" gui-text="Help">
             <label xml:space="preserve">
-Will be wrote in the nearest future
-<!--Adjusts hue, saturation and lightness in the HSL representation of the selected objects's color.-->
-<!--Options:-->
-<!--    * Hue: rotate by degrees (wraps around).-->
-<!--    * Saturation: add/subtract % (min=-100, max=100).-->
-<!--    * Lightness: add/subtract % (min=-100, max=100).-->
-<!--    * Random Hue/Saturation/Lightness: randomize the parameter's value.-->
+InkSvgNest is tool for backup nesting configuration. It is used to easily save, read and edit the position of individual objects in the file. The extension simplifies the prototyping of parts that are precisely nested on the work plane.            
+
+Original SVG to new SVG
+    * The extension reads original nested version and tries to apply same coordination to opened objects.
+
+SVG to YAML with coordinates
+    * The extension reads the coordinates of the currently open file and saves them in a YAML file in the format "Object name"->"Coordinates".
+
+YAML with coordinates to SVG
+    * The opposite variant to the previous option. Extension opens a YAML file with coordinates and tries to apply them to the open file according to the object name.
             </label>
         </page>
     </param>

@@ -83,6 +83,9 @@ class Inknest(inkex.EffectExtension):
         for el in self.svg.getiterator():
             if "transform" in el.attrib:
                 data[el.attrib["id"]] = [el.attrib["transform"]][0]
+        
+        if not data:
+            self.raise_error("Nothing to save")
 
         self.yaml_write(data, yaml_file)
 
@@ -90,6 +93,9 @@ class Inknest(inkex.EffectExtension):
         self.file_check(yaml_file, ".yaml")
         data = {}
         self.yaml_read(data, yaml_file)
+
+        if not data:
+            self.raise_error("YAML file is empty. Nothing to move.")
 
         for el in self.svg.getiterator():
             if "id" in el.attrib:
@@ -103,6 +109,10 @@ class Inknest(inkex.EffectExtension):
         for el in root.getiterator():
             if "transform" in el.attrib:
                 data[el.attrib["id"]] = [el.attrib["transform"]][0]
+
+        if not data:
+            self.raise_error("SVG file is empty. Nothing to move.")
+
 
         for el in self.svg.getiterator():
             if "id" in el.attrib:
