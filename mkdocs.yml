@@ -1,0 +1,74 @@
+site_name: InkSvgNest
+site_url: https://jakubandrysek.github.io/InkSvgNest/
+site_author: Jakub Andrýsek
+site_description: >-
+  InkSvgNest is tool for backup nesting configuration.
+  It is used to easily save, read and edit the position of individual objects in the file.
+  The extension simplifies the prototyping of parts that are precisely nested on the work plane.
+
+# Repository
+repo_name: JakubAndrysek/InkSvgNest
+repo_url: https://github.com/JakubAndrysek/InkSvgNest
+
+# Copyright
+copyright: Copyright © 2023 Jakub Andrýsek
+
+theme:
+  name: material
+  language: en
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+  icon:
+    repo: fontawesome/brands/github
+
+  palette:
+    - scheme: slate
+      primary: blue grey
+      accent: blue grey
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/JakubAndrysek
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/KubaAndrysek
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/jakub-andrysek/
+#    analytics:
+#        provider: google
+#        property: G-XXXXXXXXXX
+
+use_directory_urls: True
+
+plugins:
+  - search
+  - glightbox
+  - i18n:
+      default_language: !ENV [DEFAULT_LANGUAGE, "en"]
+      default_language_only: !ENV [DEFAULT_LANGUAGE_ONLY, false]
+      docs_structure: suffix
+      languages:
+        default:
+          name: Default (en)
+          build: true
+        cs:
+          name: Czech (cs)
+          build: true
+          site_name: InkSvgNest
+      # nav_translations:
+      #   fr:
+      #     Topic1: Sujet1
+      #     Topic2: Sujet2
+  - git-revision-date-localized
+
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+# nav:
+#   - Home: 'README.md'

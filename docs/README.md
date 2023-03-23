@@ -9,7 +9,7 @@ InkSvgNest is tool for backup nesting configuration.
 It is used to easily save, read and edit the position of individual objects in the file.
 The extension simplifies the prototyping of parts that are precisely nested on the work plane.
 
-![](./docs/media/app.png)
+![](./media/app.png)
 
 ## Installation
 Copy files from folder `InkSvgNest` to specify folder.
