@@ -1,5 +1,5 @@
 site_name: InkSvgNest
-site_url: https://jakubandrysek.github.io/InkSvgNest/
+site_url: https://svgnest.kubaandrysek.cz
 site_author: Jakub Andrýsek
 site_description: >-
   InkSvgNest is tool for backup nesting configuration.
@@ -38,9 +38,22 @@ extra:
       link: https://twitter.com/KubaAndrysek
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/jakub-andrysek/
-#    analytics:
-#        provider: google
-#        property: G-XXXXXXXXXX
+  analytics:
+    provider: google
+    property: G-02HGVR7TWV
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback!
 
 use_directory_urls: True
 
@@ -65,13 +78,11 @@ plugins:
       #     Topic2: Sujet2
   - git-revision-date-localized
 
-
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
 
 extra_javascript:
   - assets/js/open_in_new_tab.js
-
 # nav:
 #   - Home: 'README.md'
